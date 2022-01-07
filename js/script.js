@@ -1,20 +1,24 @@
 var slider = document.getElementById('slider');
 var output = document.getElementById('slideroutput');
-
 output.innerHTML = `${slider.value} x ${slider.value}`;
 
 const container = document.querySelector('#container');
-const cells = container.querySelectorAll('.cell');
 
 /*Create initial grid */
 for (let i = 0; i < slider.value * slider.value; i++) {
   const newCell = document.createElement('div');
   newCell.classList.toggle('cell');
   container.appendChild(newCell);
+  fillCell(newCell);
 }
 
-/*Update grid**/
-const updateGrid = () => {};
+function fillCell(cell) {
+  cell.addEventListener('mouseover', () => {
+    cell.setAttribute('style', 'background:#007bff');
+  });
+}
+
+/*Update grid*/
 slider.oninput = function () {
   let sliderValue = this.value;
   output.innerHTML = `${sliderValue} x ${sliderValue}`;
@@ -25,8 +29,8 @@ slider.oninput = function () {
   for (let i = 0; i < slider.value * slider.value; i++) {
     const newCell = document.createElement('div');
     newCell.classList.toggle('cell');
-    newCell.setAttribute('style', '');
     container.appendChild(newCell);
+    fillCell(newCell);
   }
 
   container.style.setProperty(
@@ -34,3 +38,14 @@ slider.oninput = function () {
     'repeat(' + sliderValue + ', 1fr)'
   );
 };
+
+const clearBtn = document.querySelector('#clearButton');
+clearBtn.addEventListener('click', clearCells);
+
+function clearCells() {
+  const cells = container.querySelectorAll('.cell');
+  const cellsArray = [...cells];
+  cellsArray.forEach((cell) => {
+    cell.setAttribute('style', 'background:#2f4553;');
+  });
+}
