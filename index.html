@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="hor-nav">
+        <i class="logo fas fa-pencil-ruler"></i>
+        <h1>Etch-A-<span class="title-color-changer">Sketch</span>.</h1>
+      </div>
+      <div class="ver-nav-panel-wrapper">
+        <div class="ver-nav">
+          <div class="tooltip-1">
+            <i class="fas fa-trash-restore-alt"></i>
+            <span class="tooltiptext-1">Clear all</span>
+          </div>
+
+          <div class="tooltip-2">
+            <i class="fas fa-eye-dropper"></i>
+            <span class="tooltiptext-2">Color picker</span>
+          </div>
+
+          <div class="tooltip-3">
+            <i class="fas fa-rainbow"></i>
+            <span class="tooltiptext-3">Rainbow mode</span>
+          </div>
+
+          <div class="tooltip-4">
+            <i class="fas fa-eraser"></i>
+            <span class="tooltiptext-4">Eraser</span>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="slider-container-text">Select grid size:</div>
+          <div class="slider-container">
+            <input type="range" min="16" max="100" value="50" id="slider" />
+          </div>
+          <p id="slideroutput"></p>
+          <div class="sketch-area">&nbsp;</div>
+          <p class="footer-text">
+            Copyright © 2022 gzveriachvili
+            <a href="https://github.com/gzveriachvili" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

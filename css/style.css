@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700&family=Leckerli+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1a2c38;
+  font-family: 'Lato', sans-serif;
+  color: #eaeced;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.hor-nav {
+  height: 10vh;
+  position: relative;
+  display: flex;
+  background-color: #1a2c38;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  padding: 12px 0px 12px 0px;
+  -webkit-box-shadow: 0px 6px 14px -2px rgba(0, 0, 0, 0.568);
+  box-shadow: 0px 6px 14px -2px rgba(0, 0, 0, 0.555);
+}
+
+.hor-nav i {
+  position: absolute;
+  left: 1%;
+  font-size: 26px;
+  background: #ffd130;
+  padding: 10px;
+  border-radius: 15%;
+  color: #1a2c38;
+}
+
+.hor-nav h1 {
+  color: #eaeced;
+  font-family: 'Leckerli One', cursive;
+  letter-spacing: 2px;
+  font-size: 39px;
+}
+
+.title-color-changer {
+  color: #ffd130;
+}
+
+.ver-nav-panel-wrapper {
+  display: flex;
+
+  height: 90vh;
+}
+
+.ver-nav {
+  display: flex;
+  flex-direction: column;
+  width: 5%;
+  align-items: center;
+  row-gap: 10px;
+  background: #0f212f;
+}
+
+.ver-nav i {
+  font-size: 20px;
+  transition-timing-function: ease-out;
+  transition-duration: 0.1s;
+  margin-top: 30px;
+}
+
+.ver-nav i:hover {
+  cursor: pointer;
+  color: #a1aabf;
+}
+
+.tooltip-1,
+.tooltip-2,
+.tooltip-3,
+.tooltip-4 {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-1 .tooltiptext-1,
+.tooltip-2 .tooltiptext-2,
+.tooltip-3 .tooltiptext-3,
+.tooltip-4 .tooltiptext-4 {
+  visibility: hidden;
+  width: 120px;
+  background-color: #ffffff;
+  border: 2px solid #1a2c38;
+  color: #1a2c38;
+  font-weight: 300;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 15px;
+  left: 180%;
+}
+
+.tooltip-1 .tooltiptext-1::after,
+.tooltip-2 .tooltiptext-2::after,
+.tooltip-3 .tooltiptext-3::after,
+.tooltip-4 .tooltiptext-4::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #ffffff transparent transparent;
+}
+.tooltip-1:hover .tooltiptext-1,
+.tooltip-2:hover .tooltiptext-2,
+.tooltip-3:hover .tooltiptext-3,
+.tooltip-4:hover .tooltiptext-4 {
+  visibility: visible;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  align-items: center;
+  margin-right: 50px;
+  background: #1a2c38;
+  flex-grow: 1;
+}
+.slider-container {
+  width: 25%;
+}
+.slider-container-text {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 3px;
+  background: #d3d3d3;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background: #007bff;
+  cursor: pointer;
+}
+
+#slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #007bff;
+  cursor: pointer;
+}
+
+#slideroutput {
+  margin-bottom: 15px;
+}
+
+.footer-text {
+  padding: 15px;
+}
+
+.fa-github {
+  margin-left: 5px;
+  transition: 0.5s;
+}
+
+.footer-text a {
+  color: inherit;
+}
+
+.fa-github:hover {
+  cursor: pointer;
+  color: #007bff;
+  transform: rotate(360deg);
+}
+
+.sketch-area {
+  background: #0f212f;
+  width: 70%;
+  height: 100%;
+  cursor: pointer;
+}
