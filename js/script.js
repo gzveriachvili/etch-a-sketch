@@ -18,12 +18,11 @@ function createInitialGrid() {
 }
 
 function fillCell(cell) {
-  var randomColor = Math.floor(Math.random() * 16777215).toString(16);
-  var someCol = 'fff';
   cell.addEventListener('mouseover', () => {
     if (!rainbowTog && !eraserTog && defaultTog) {
       cell.setAttribute('style', 'background:#15252D');
     } else if (!eraserTog && rainbowTog) {
+      var randomColor = Math.floor(Math.random() * 16777215).toString(16);
       cell.style.setProperty('background', '#' + randomColor);
     } else {
       cell.setAttribute('style', 'background:#2f4553');
